@@ -6,6 +6,12 @@ REPO_URL="https://github.com/0smid0s/ads-sandbox-v2.git"
 DIR_NAME="ads-sandbox"
 DIR_NAME_2="ads-sandbox-v2"
 
+# Wipe all Docker containers and images
+echo "Wiping all Docker containers and images..."
+docker stop $(docker ps -aq) 2>/dev/null || true
+docker rm   $(docker ps -aq) 2>/dev/null || true
+docker rmi  $(docker images -q) --force   2>/dev/null || true
+
 # Remove existing directory
 if [ -d "$DIR_NAME" ]; then
     echo "Directory '$DIR_NAME' exists. Removing it..."
