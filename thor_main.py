@@ -89,8 +89,8 @@ _parser = argparse.ArgumentParser(add_help=False)
 _parser.add_argument("-T", "--tor",        action="store_true")
 _parser.add_argument("-P", "--proxy",      action="store_true")
 _parser.add_argument("--debug",            action="store_true")
-_parser.add_argument("--socks-port",       type=int, default=9050)
-_parser.add_argument("--control-port",     type=int, default=9051)
+_parser.add_argument("--socks-port",       type=int, default=int(os.environ.get("SOCKS_PORT", 9050)))
+_parser.add_argument("--control-port",     type=int, default=int(os.environ.get("CONTROL_PORT", 9051)))
 _args, _ = _parser.parse_known_args()
 
 TOR_PROXY    = f"socks5://127.0.0.1:{_args.socks_port}"
