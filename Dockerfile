@@ -12,4 +12,4 @@ COPY . .
 ENV SOCKS_PORT=9050
 ENV CONTROL_PORT=9051
 
-CMD ["sh", "-c", "mkdir -p /logs && python3 -u thor_main.py -T --socks-port $SOCKS_PORT --control-port $CONTROL_PORT >> /logs/sessions.log 2>&1"]
+CMD ["sh", "-c", "mkdir -p /logs && python3 -u thor_main.py -T >> /logs/sessions.log 2>&1"]
