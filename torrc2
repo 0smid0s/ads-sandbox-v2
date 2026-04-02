@@ -1,0 +1,9 @@
+SocksPort 127.0.0.1:9052
+ControlPort 127.0.0.1:9053
+DataDirectory content/tor2
+HashedControlPassword ""
+Log notice stdout
+CircuitBuildTimeout 30
+LearnCircuitBuildTimeout 0
+MaxCircuitDirtiness 10
+NewCircuitPeriod 10

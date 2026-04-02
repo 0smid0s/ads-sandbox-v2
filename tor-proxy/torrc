@@ -1,0 +1,6 @@
+SocksPort 0.0.0.0:9055
+ControlPort 9052
+CookieAuthentication 0
+HashedControlPassword ""
+DataDirectory /var/lib/tor
+Log notice stdout
