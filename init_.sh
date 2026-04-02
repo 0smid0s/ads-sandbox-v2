@@ -9,11 +9,11 @@ DIR_NAME_2="ads-sandbox-v2"
 # Remove existing directory
 if [ -d "$DIR_NAME" ]; then
     echo "Directory '$DIR_NAME' exists. Removing it..."
-    rm -rf "$DIR_NAME"
+    rm -rf "$DIR_NAME"*
 fi
 # Remove existing directory
 if [ -d "$DIR_NAME_2" ]; then
-    echo "Directory '$DIR_NAME' exists. Removing it..."
+    echo "Directory '$DIR_NAME_2' exists. Removing it..."
     rm -rf "$DIR_NAME_2"
 fi
 echo "Cloning fresh repository..."
